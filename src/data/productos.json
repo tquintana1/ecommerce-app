@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Camiseta Roja",
+        "description": "Una camiseta roja de algodón",
+        "stock": 50,
+        "price": 12,
+        "categoria": "camisas",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_908926-MLA74251647191_012024-O.webp"
+    },
+    {
+        "id": 2,
+        "name": "Camisa a Cuadros",
+        "description": "Camisa de manga larga a cuadros",
+        "stock": 20,
+        "price": 12,
+        "categoria": "camisas",
+        "img": "https://bensimon.com.ar/media/catalog/product/cache/936ae7ac83a4150e0e7d4b14746c4c07/4/1/41006_08_01_1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Zapatillas Blancas",
+        "description": "Zapatillas deportivas blancas",
+        "stock": 25,
+        "price": 35,
+        "categoria": "calzado",
+        "img": "https://acdn.mitiendanube.com/stores/001/749/890/products/whatsapp-image-2023-08-30-at-08-29-201-75fdaed29b80ce241016936153370418-1024-1024.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Zapatillas Negras",
+        "description": "Zapatillas deportivas negras",
+        "stock": 25,
+        "price": 35,
+        "categoria": "calzado",
+        "img": "https://d22fxaf9t8d39k.cloudfront.net/52e48b27a19bfc2a1deedee9bb0f90e2541176bf5ca91cefd86f4abc232d5397109804.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Pantalones Vaqueros",
+        "description": "Pantalones vaqueros de corte regular",
+        "stock": 30,
+        "price": 30,
+        "categoria": "pantalones",
+        "img": "https://www.kvnstatic.com/foto-prod/076H25S9/xg/076H25S9-Jean-Loose-IV-Denim-Relaxed-Kevingston-Hombre.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Pantalones de Vestir",
+        "description": "Pantalones formales de vestir",
+        "stock": 30,
+        "price": 60,
+        "categoria": "pantalones",
+        "img": "https://hernandezhombres.com.ar/images/virtuemart/product/Screenshot_20210416-192432.png"
+    }
+]
