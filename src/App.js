@@ -6,8 +6,10 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
 
 function App() {
+
   return (
     <div className='App'>
       <Navbar />

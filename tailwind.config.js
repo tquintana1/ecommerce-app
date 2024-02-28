@@ -3,8 +3,8 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+
+  themes: ["light", "dark", "cupcake"],
+
+  plugins: [require("daisyui")],
 }

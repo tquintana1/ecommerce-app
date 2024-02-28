@@ -1,6 +1,14 @@
 import 'flowbite';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Cart from './Cart';
 
 function Navbar() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <>
             <nav class="bg-white border-gray-200 ">
@@ -29,7 +37,7 @@ function Navbar() {
                                 <a href="/categoria/calzado" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Calzado</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Carrito</a>
+                                <Cart />
                             </li>
                         </ul>
                     </div>
