@@ -1,14 +1,9 @@
 import 'flowbite';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Cart from './Cart';
+import { PiPants } from "react-icons/pi";
+import { TbSmartHome, TbShoe, TbShirtSport, TbShoppingCart } from "react-icons/tb";
 
 function Navbar() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     return (
         <>
             <nav class="bg-white border-gray-200 ">
@@ -25,19 +20,37 @@ function Navbar() {
                     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
                             <li>
-                                <a href="/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Inicio</a>
+                                <a href="/" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400 md:p-0">
+                                    <TbSmartHome class="w-5 h-5 mr-2" />
+                                    Inicio
+                                </a>
                             </li>
                             <li>
-                                <a href="/categoria/camisas" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Camisas</a>
+                                <a href="/categoria/camisas" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400 md:p-0">
+                                    <TbShirtSport class="w-5 h-5 mr-2" />
+                                    Camisas
+                                </a>
                             </li>
+
                             <li>
-                                <a href="/categoria/pantalones" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Pantalones</a>
+                                <a href="/categoria/pantalones" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400 md:p-0">
+                                    <PiPants class="w-5 h-5 mr-2" />
+                                    Pantalones
+                                </a>
                             </li>
+
                             <li>
-                                <a href="/categoria/calzado" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400	 md:p-0 ">Calzado</a>
+                                <a href="/categoria/calzado" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400 md:p-0">
+                                    <TbShoe class="w-5 h-5 mr-2" />
+                                    Calzado
+                                </a>
                             </li>
+
                             <li>
-                                <Cart />
+                                <a href="/cart" class="flex items-center py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-amber-400 md:p-0">
+                                    <TbShoppingCart class="w-5 h-5 mr-2" />
+                                    Carrito
+                                </a>
                             </li>
                         </ul>
                     </div>
