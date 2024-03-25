@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -13,9 +13,9 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar />
       <Router>
-        <CartProvider>
+          <Navbar />
+          <CartProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categoria/:categoryId" element={<ItemListContainer />} />

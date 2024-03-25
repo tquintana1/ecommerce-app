@@ -1,16 +1,34 @@
-import React, { useState, useContext } from "react";
-import { useParams, Link } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Toaster } from "sonner";
-import { addToCart } from "./Cart/addToCart";
 import { CartContext } from "./Cart/CartContext";
-import { ItemList } from "./ItemList";
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import db from '../firebase';
 
 function ItemListContainer() {
     const { categoryId } = useParams();
     const [productos, setProductos] = useState([]);
-    const { cartItems, setCartItems } = useContext(CartContext);
+    const { cartItems, setCartItems, addToCart } = useContext(CartContext);
 
-    ItemList(categoryId, setProductos, setCartItems);
+    useEffect(() => {
+        const fetchProductos = async () => {
+            try {
+                let querySnapshot;
+                if (categoryId) {
+                    const q = query(collection(db, 'productos'), where('categoria', '==', categoryId));
+                    querySnapshot = await getDocs(q);
+                } else {
+                    querySnapshot = await getDocs(collection(db, 'productos'));
+                }
+                const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                setProductos(data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+
+        fetchProductos();
+    }, [categoryId]);
 
     return (
         <main>
